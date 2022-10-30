@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# curl -ks https://raw.github.com/gist/1443588/chrome-cookies.sh | sh
+# curl -ks https://raw.githubusercontent.com/masterofthesith/withChromeCookies.sh/main/chrome.sh | sh
 
 STARTD=${PWD}
 NOW=$(date -u +%Y%m%dt%H%M%S)
@@ -21,7 +21,7 @@ t=${STARTD}/cookies.txt
 
 trap "rm -f ${COOKIES}" 0
 cp Cookies ${COOKIES}
-curl -ks https://raw.github.com/gist/1443588/chrome-cookies.sh \
+curl -ks https://raw.githubusercontent.com/masterofthesith/withChromeCookies.sh/main/chrome.sh \
 | sh \
 >> ${STARTD:-.}/cookies.txt
 
